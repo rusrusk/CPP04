@@ -6,7 +6,7 @@ CFLAGS			=			-Wall -Wextra -Werror --std=c++98
 
 RM				=			rm -rf
 
-SRCS			=			main.cpp Animal.cpp
+SRCS			=			main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp 
 
 OBJSDIR			=			objs
 
