@@ -4,13 +4,15 @@
 #include <iostream>
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal {
    private:
-    
+    std::string _type;
+    Brain *brain;
 
    public:
-    void makeSound(void) const;
+    void makeSound() const;
     // Dog(std::string param_type);
     Dog();
     Dog(const Dog &other);
@@ -19,6 +21,10 @@ class Dog : public Animal {
 
     //getter
     std::string getType(void) const;
+
+    //Brain getter and setter
+    void setIdea(std::string param_idea, int i);
+    Brain* getIdea(void) const;
 };
 
 #endif

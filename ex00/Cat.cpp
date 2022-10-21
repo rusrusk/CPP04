@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat() : _type("Cat") {
+Cat::Cat() : Animal("Cat") {
 
 	std::cout << "[" << this->_type << "] constructor was called" << std::endl;
 }
@@ -34,5 +34,5 @@ std::string Cat::getType(void) const {
 }	
 
 void Cat::makeSound() const {
-	std::cout << "Meeeeeeeoooooooooooowwwwwwwwwww" << std::endl;
+	std::cout << "[" << this->_type << "] Meeeeeeeoooooooooooowwwwwwwwwww" << std::endl;
 }

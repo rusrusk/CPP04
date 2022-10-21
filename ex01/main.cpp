@@ -3,47 +3,79 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 #include "WrongAnimal.hpp"
-
+#include "Brain.hpp"
 
 int main () {
 
-	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
-	Animal *animal = new Animal();
-	std::cout << "This is [" << animal->getType() << "]" << std::endl;
-	animal->makeSound();
-	delete animal;
+	Animal *animal[4];
 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
 
-	Animal *cat = new Cat();
-	std::cout << "This is [" << cat->getType() << "]" << std::endl;
-	cat->makeSound();
-	delete cat;
-	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+	for (int i = 0; i < 2;i++) {
 
-	Animal *dog = new Dog();
-	std::cout << "This is [" << dog->getType() << "]" << std::endl;
-	dog->makeSound();
-	delete dog;
-	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+		animal[i] = new Cat();
+		std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+		animal[i + 2] = new Dog();
+		std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+		
+	}
+	for (int i = 0; i < 4; i++) {
 
-	WrongAnimal *wrong_animal = new WrongAnimal();
-	std::cout << "This is [" << wrong_animal->getWrongType() << "]" << std::endl;
-	wrong_animal->makeWrongSound();
-	delete wrong_animal;
-	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+		std::cout << COLOR_RED << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+		delete animal[i];
+		std::cout << COLOR_RED << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+	}
 
-	WrongCat *wrong_cat = new WrongCat();
-	std::cout << "This is [" << wrong_cat->getWrongType() << "]" << std::endl;
-	wrong_cat->makeWrongSound();
-	delete wrong_cat;
-	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+	// Animal animal1;
+	// Animal animal2(animal1);
 
+	// Dog dog1;
+	// Dog dog2 = dog1;
+
+	Cat cat1;
+	Cat cat2 = cat1;
 	
-	// Animal *animal1 = new Dog();
-	// delete animal1;
-
 	return 0;
 }
+
+
+// int main () {
+
+// 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+// 	Animal *animal = new Animal();
+// 	std::cout << "This is [" << animal->getType() << "]" << std::endl;
+// 	animal->makeSound();
+// 	delete animal;
+// 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+
+// 	Animal *cat = new Cat();
+// 	std::cout << "This is [" << cat->getType() << "]" << std::endl;
+// 	cat->makeSound();
+// 	delete cat;
+// 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+
+// 	Animal *dog = new Dog();
+// 	std::cout << "This is [" << dog->getType() << "]" << std::endl;
+// 	dog->makeSound();
+// 	delete dog;
+// 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+
+// 	WrongAnimal *wrong_animal = new WrongAnimal();
+// 	std::cout << "This is [" << wrong_animal->getWrongType() << "]" << std::endl;
+// 	wrong_animal->makeWrongSound();
+// 	delete wrong_animal;
+// 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+
+// 	WrongCat *wrong_cat = new WrongCat();
+// 	std::cout << "This is [" << wrong_cat->getWrongType() << "]" << std::endl;
+// 	wrong_cat->makeWrongSound();
+// 	delete wrong_cat;
+// 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
+
+	
+
+
+	
+// }
 
 
 // int main {

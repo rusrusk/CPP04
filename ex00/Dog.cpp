@@ -1,7 +1,7 @@
 #include "Dog.hpp"
 
-Dog::Dog() : _type("Dog") {
-	std::cout << this->_type << " constructor was called" << std::endl;
+Dog::Dog() : Animal("Dog") {
+	std::cout << "[" << this->_type << "] constructor was called" << std::endl;
 }
 
 // Dog::Dog(std::string param_type) {
@@ -27,7 +27,7 @@ Dog &Dog::operator=(const Dog &other) {
 }
 
 Dog::~Dog() {
-	std::cout << this->_type << " was destroyed" << std::endl;
+	std::cout << "[" << this->_type << "] was destroyed" << std::endl;
 }
 
 std::string Dog::getType(void) const {
@@ -35,5 +35,5 @@ std::string Dog::getType(void) const {
 }
 
 void Dog::makeSound() const {
-	std::cout << "Baaaaaaark" << std::endl;
+	std::cout << "[" << this->_type << "] Baaaaaaark" << std::endl;
 }

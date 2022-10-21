@@ -28,7 +28,7 @@ class WrongAnimal {
 			void setWrongType(std::string param_wrong_type);
 			virtual std::string getWrongType(void) const;
 			
-			void makeWrongSound() const;
+			virtual void makeWrongSound() const;
 };
 
 
