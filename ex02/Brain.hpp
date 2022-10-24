@@ -1,5 +1,5 @@
 #ifndef BRAIN_HPP
-# define BRAIN_HPP
+#define BRAIN_HPP
 
 #include <iostream>
 
@@ -12,27 +12,19 @@
 #define COLOR_WHITE "\033[37m"
 
 class Brain {
+   protected:
+    std::string _ideas[100];
 
-	protected :
-				std::string _ideas[100];
+   public:
+    Brain();
+    Brain(std::string param_name);
+    Brain(const Brain &other);
+    Brain &operator=(const Brain &other);
+    ~Brain();
 
-	public :
-				Brain();
-				Brain(std::string param_name);
-				Brain(const Brain &other);
-				Brain &operator=(const Brain &other);
-				~Brain();
-
-				// setter and getter
-				void setIdea(std::string param_idea, int i);
-				std::string getIdea(int i) const;
+    // setter and getter
+    void setIdea(std::string param_idea, int i);
+    std::string getIdea(int i) const;
 };
-
-
-
-
-
-
-
 
 #endif

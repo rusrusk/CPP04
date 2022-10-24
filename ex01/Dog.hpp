@@ -9,9 +9,9 @@
 class Dog : public Animal {
    private:
     std::string _type;
-    Brain *brain;
 
    public:
+    Brain *_brain;
     void makeSound() const;
     // Dog(std::string param_type);
     Dog();
@@ -19,12 +19,13 @@ class Dog : public Animal {
     Dog &operator=(const Dog &other);
     ~Dog();
 
-    //getter
+    // getter
     std::string getType(void) const;
 
-    //Brain getter and setter
+    // Brain getter and setter
     void setIdea(std::string param_idea, int i);
-    Brain* getIdea(void) const;
+    std::string getIdea(int i) const;
+    Brain *getBrain() const;
 };
 
 #endif

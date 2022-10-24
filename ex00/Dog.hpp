@@ -11,7 +11,6 @@ class Dog : public Animal {
 
    public:
     void makeSound(void) const;
-    // Dog(std::string param_type);
     Dog();
     Dog(const Dog &other);
     Dog &operator=(const Dog &other);

@@ -1,5 +1,5 @@
 #ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
@@ -12,25 +12,21 @@
 #define COLOR_WHITE "\033[37m"
 
 class WrongAnimal {
+   protected:
+    std::string _wrong_type;
 
+   public:
+    WrongAnimal(std::string param_wrong_type);
+    WrongAnimal();
+    WrongAnimal(const WrongAnimal &other);
+    WrongAnimal &operator=(const WrongAnimal &other);
+    virtual ~WrongAnimal();
 
-	protected :
-			std::string _wrong_type;
+    // getter and setter
+    void setWrongType(std::string param_wrong_type);
+    virtual std::string getWrongType(void) const;
 
-	public :
-			WrongAnimal(std::string param_wrong_type);
-			WrongAnimal();
-			WrongAnimal(const WrongAnimal &other);
-			WrongAnimal &operator=(const WrongAnimal &other);
-			virtual ~WrongAnimal();
-
-			//getter and setter
-			void setWrongType(std::string param_wrong_type);
-			virtual std::string getWrongType(void) const;
-			
-			void makeWrongSound() const;
+    void makeWrongSound() const;
 };
-
-
 
 #endif

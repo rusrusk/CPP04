@@ -38,10 +38,6 @@ int main () {
 	delete wrong_cat;
 	std::cout << COLOR_BLUE << std::string(50, '=') << COLOR_DEFAULT << std::endl;
 
-	
-	// Animal *animal1 = new Dog();
-	// delete animal1;
-
 	return 0;
 }
 

@@ -13,7 +13,6 @@ class Character : public ICharacter {
     AMateria *tmp_trash[_equipped_capacity_nb];
     int nb_of_known_materials;
 
-
    protected:
     std::string _inventory_name;
 
@@ -21,7 +20,7 @@ class Character : public ICharacter {
     Character();
     Character(std::string param_name);
     Character(const Character &other);
-    Character operator=(const Character &other);
+    Character &operator=(const Character &other);
     ~Character();
 
     virtual void equip(AMateria *m);

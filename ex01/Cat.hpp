@@ -8,23 +8,22 @@
 
 class Cat : public Animal {
    private:
-    // std::string _type;
-    Brain* brain;
+    Brain *_brain;
 
    public:
-    // Cat(std::string param_type);
     void makeSound() const;
     Cat();
     Cat(const Cat &other);
     Cat &operator=(const Cat &other);
     ~Cat();
 
-    //getters
+    // getters
     std::string getType(void) const;
 
-    //Brain setter and getter
+    // Brain setter and getter
     void setIdea(std::string param_idea, int i);
-    Brain* getIdea(void) const;
+    std::string getIdea(int i) const;
+    Brain *getBrain() const;
 };
 
 #endif

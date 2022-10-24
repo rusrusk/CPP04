@@ -13,7 +13,6 @@
 
 class Animal {
    private:
-
    protected:
     std::string _type;
 
@@ -25,7 +24,7 @@ class Animal {
     Animal &operator=(const Animal &other);
     virtual ~Animal();
 
-    //setters and getters
+    // setters and getters
     void setType(std::string param_type);
     virtual std::string getType(void) const;
 };
