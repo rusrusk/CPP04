@@ -8,10 +8,10 @@
 
 class Dog : public Animal {
    private:
-    std::string _type;
+    Brain *_brain;
+
 
    public:
-    Brain *_brain;
     void makeSound() const;
     // Dog(std::string param_type);
     Dog();

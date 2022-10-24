@@ -8,7 +8,6 @@
 
 class Cat : public Animal {
    private:
-    std::string _type;
     Brain* brain;
 
    public:
